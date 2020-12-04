@@ -1,4 +1,4 @@
-import {createAction, handleAction} from 'redux-actions';
+import {createAction, handleActions} from 'redux-actions';
 
 const SAMPLE_ACTION = "auth/SAMPLE_ACTION";
 
