@@ -81,7 +81,7 @@ const auth = handleActions(
      ...state,
      authError:error,
    }),
-   [LOGIN_SUCCESS] : (state, {password :auth}) => ({
+   [LOGIN_SUCCESS] : (state, {payload :auth}) => ({
      ...state,
      authError:null,
      auth,
