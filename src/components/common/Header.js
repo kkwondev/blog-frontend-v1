@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Responsive from './Responsive';
 import Button from './Button';
+import { Link } from 'react-router-dom';
 
 const HeaderBlock = styled.div`
     position:fixed;
@@ -25,20 +26,30 @@ const Wrapper = styled(Responsive)`
             align-items:center
         }
 `;
-
+const UserInfo = styled.div`
+    font-weight:800;
+    margin-right:1rem;
+`;
 const Spacer = styled.div`
     height:4rem;
 `;
 
-const Header = () => {
+const Header = ({user,onLogout}) => {
     return(
         <>
             <HeaderBlock>
                 <Wrapper>
-                    <div className="logo">KKWON BLOG</div>
-                    <div className="right">
+                    <Link to="/" className="logo">KKWON BLOG</Link>
+                    {user ? (
+                        <div className="right">
+                            <UserInfo>{user.username}</UserInfo>
+                            <Button onClick={onLogout}>로그아웃</Button>
+                        </div>
+                    ):(
+                        <div className="right">
                         <Button to="/login">로그인</Button>
                     </div>
+                    )}
                 </Wrapper>
             </HeaderBlock>
         </>
