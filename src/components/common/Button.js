@@ -13,7 +13,11 @@ const buttonStyle = css`
   outline: none;
   cursor: pointer;
 
-
+&:disabled {
+  background:${palette.gray[3]};
+  color:${palette.gray[5]};
+  cursor:not-allowed;
+}
 
 background: ${palette.gray[8]};
   &:hover {

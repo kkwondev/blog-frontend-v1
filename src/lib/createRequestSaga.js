@@ -17,7 +17,8 @@ return function*(action) {
         const response = yield call(request, action.payload);
         yield put({
             type:SUCCESS,
-            payload:response.data
+            payload:response.data,
+            meta:response,
         })
     }catch(e) {
         console.debug(e)

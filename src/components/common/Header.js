@@ -15,7 +15,7 @@ const Wrapper = styled(Responsive)`
     height:4rem;
     display:flex;
     align-items:center;
-    justify-content:space-around;
+    justify-content:space-between;
         .logo {
             font-size:1.125rem;
             font-weight:800;
@@ -23,7 +23,7 @@ const Wrapper = styled(Responsive)`
         }
         .right {
             display:flex;
-            align-items:center
+            align-items:center;
         }
 `;
 const UserInfo = styled.div`
