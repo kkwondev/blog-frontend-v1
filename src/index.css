@@ -33,7 +33,10 @@ a {
 
 
 
-
+img {
+  width:100%;
+  display: block;
+}
 
 pre {
   background:#23241f;

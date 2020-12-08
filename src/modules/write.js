@@ -21,6 +21,9 @@ const [
 
 const SET_ORIGINAL_POST = 'write/SET_ORIGINAL_POST';
 
+
+
+
 export const initialize = createAction(INITIALIZE);
 export const changeField = createAction(CHANGE_FIELD, ({ key, value }) => ({
   key,
@@ -56,6 +59,7 @@ const initialState = {
   post: null,
   postError: null,
   originalPostId:null,
+  images: [],
 };
 
 const write = handleActions(
@@ -96,7 +100,7 @@ const write = handleActions(
     [UPDATE_POST_FAILURE] : (state, {payload:postError}) =>({
       ...state,
       postError,
-    })
+    }),
   },
   initialState,
 );
