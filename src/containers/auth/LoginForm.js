@@ -39,7 +39,7 @@ const LoginForm = ({history}) => {
             if(authError) {
                 console.log('오류발생')
                 console.log(authError)
-                setError('로그인 실패')
+                setError('아이디 혹은 비밀번호가 틀립니다.')
             }
             if(auth) {
                 console.log('로그인 성공')
