@@ -48,7 +48,7 @@ const PostItem = ({ post }) => {
         <Link to={`/@${user.username}/${_id}`}>{title}</Link>
       </h2>
       <SubInfo
-        username={user.username}
+        username={!user.nickname ? '닉네임 없음' : user.nickname }
         publishedDate={new Date(publishedDate)}
       />
       <Tags tags={tags} />

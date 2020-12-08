@@ -42,7 +42,7 @@ const Header = ({user,onLogout}) => {
                     <Link to="/" className="logo">KKWON BLOG</Link>
                     {user ? (
                         <div className="right">
-                            <UserInfo>{user.username}</UserInfo>
+                            <UserInfo>{user.nickname}</UserInfo>
                             <Button onClick={onLogout}>로그아웃</Button>
                         </div>
                     ):(

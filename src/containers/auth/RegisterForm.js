@@ -27,8 +27,8 @@ const RegisterForm = ({history}) => {
         }
         const onSubmit = e => {
             e.preventDefault();
-            const {username,password,passwordConfirm} = form;
-            if([username,password,passwordConfirm].includes('')) {
+            const {username,password,passwordConfirm,nickname} = form;
+            if([username,password,passwordConfirm,nickname].includes('')) {
                 setError('빈칸을 모두 입력하세요.')
             }
             if(password !== passwordConfirm) {
@@ -37,7 +37,7 @@ const RegisterForm = ({history}) => {
                 dispatch(changeField({form:'register', key:'passwordConfirm',value:''}))
                 return;
             }
-            dispatch(register({username,password}))
+            dispatch(register({username,password,nickname}))
         }
 
         useEffect(()=> {

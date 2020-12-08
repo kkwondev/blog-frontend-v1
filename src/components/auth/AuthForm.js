@@ -54,7 +54,6 @@ const ButtonWithMarginTop = styled(Button)`
   margin-top: 1rem;
 `;
 
-
 /**
  * 에러를 보여줍니다
  */
@@ -64,22 +63,23 @@ const ErrorMessage = styled.div`
   font-size: 0.875rem;
   margin-top: 1rem;
 `;
-const textMap ={
-  login:'로그인',
-  register:'회원가입',
-}
-const AuthForm = ({type,form,onChange,onSubmit,error}) => {
-  const text = textMap[type]
+const textMap = {
+  login: '로그인',
+  register: '회원가입',
+};
+const AuthForm = ({ type, form, onChange, onSubmit, error }) => {
+  const text = textMap[type];
   return (
     <AuthFormBlock>
       <h3>{text}</h3>
-      <form onSubmit={onSubmit} >
+      <form onSubmit={onSubmit}>
         <StyledInput
           autoComplete="username"
           name="username"
           onChange={onChange}
           value={form.username}
           placeholder="아이디"
+          type="email"
         />
         <StyledInput
           autoComplete="new-password"
@@ -89,23 +89,34 @@ const AuthForm = ({type,form,onChange,onSubmit,error}) => {
           onChange={onChange}
           value={form.password}
         />
-        {type === 'register' &&(
-        <StyledInput
-        autoComplete="new-password"
-        name="passwordConfirm"
-        placeholder="비밀번호 확인"
-        type="password"
-        onChange={onChange}
-        value={form.passwordConfirm}
-      />
+        {type === 'register' && (
+          <>
+            <StyledInput
+              autoComplete="new-password"
+              name="passwordConfirm"
+              placeholder="비밀번호 확인"
+              type="password"
+              onChange={onChange}
+              value={form.passwordConfirm}
+            />
+            <StyledInput
+              autoComplete="nickname"
+              name="nickname"
+              placeholder="닉네임"
+              onChange={onChange}
+              value={form.nickname}
+            />
+          </>
         )}
         {error && <ErrorMessage>{error}</ErrorMessage>}
-        <ButtonWithMarginTop cyan fullWidth>{text}</ButtonWithMarginTop>
+        <ButtonWithMarginTop cyan fullWidth>
+          {text}
+        </ButtonWithMarginTop>
       </form>
       <Footer>
         {type === 'login' ? (
           <Link to="/register">회원가입</Link>
-        ) :(
+        ) : (
           <Link to="/login">로그인</Link>
         )}
       </Footer>

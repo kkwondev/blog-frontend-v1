@@ -41,7 +41,7 @@ const PostViewer = ({post,error,loading,actionButtons}) => {
             <PostHead>
                <h1>{title}</h1>  
             <SubInfo
-            username={user.username}
+            username={!user.nickname ? '닉네임 없음' : user.nickname}
             publishedDate={publishedDate}
             hasMarginTop/>
             <Tags tags={tags}/>

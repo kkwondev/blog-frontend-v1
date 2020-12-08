@@ -23,6 +23,3 @@ client.patch(`/api/posts/${id}`,{
 })
 
 export const removePost = id => client.delete(`/api/posts/${id}`);
-
-export const uploadImage = ({image}) =>
-  client.post('/api/posts/images', {image});

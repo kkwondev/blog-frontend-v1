@@ -21,6 +21,10 @@ const WriteActionButtonsContainer =({history}) => {
             dispatch(updatePost({title,body,tags, id:originalPostId}));
             return;
         }
+        if(title === '' || body === '') {
+            alert('제목, 내용을 작성하십시오')
+            return;
+        }
         dispatch(
             writePost({
                 title,
