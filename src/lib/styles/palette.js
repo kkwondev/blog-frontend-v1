@@ -24,6 +24,10 @@ const palette = {
       '#0c8599',
       '#0b7285',
     ],
+    kkw: [
+      '#2364AA',
+      '#3da5da',
+    ]
   };
   
   export default palette;

@@ -8,7 +8,7 @@ import Tags from '../common/Tags';
 import { Link } from 'react-router-dom';
 
 const PostListBlock = styled(Responsive)`
-  margin-top: 3rem;
+  /* margin-top: 3rem; */
 `;
 
 const WritePostButtonWrapper = styled.div`
@@ -18,8 +18,8 @@ const WritePostButtonWrapper = styled.div`
 `;
 
 const PostItemBlock = styled.div`
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
   /* 맨 위 포스트는 padding-top 없음 */
   &:first-child {
     padding-top: 0;
@@ -28,7 +28,8 @@ const PostItemBlock = styled.div`
     border-top: 1px solid ${palette.gray[2]};
   }
   h2 {
-    font-size: 2rem;
+    font-size: 1.5rem;
+    letter-spacing:-2px;
     margin-bottom: 0;
     margin-top: 0;
     &:hover {
@@ -36,7 +37,7 @@ const PostItemBlock = styled.div`
     }
   }
   p {
-    margin-top: 2rem;
+    margin-top: 1rem;
   }
 `;
 

@@ -8,7 +8,7 @@ const buttonStyle = css`
   border-radius: 4px;
   font-size: 1rem;
   font-weight: bold;
-  padding: 0.25rem 1rem;
+  padding: 0.3rem 1rem;
   color: white;
   outline: none;
   cursor: pointer;
@@ -34,9 +34,9 @@ background: ${palette.gray[8]};
   ${props =>
   props.cyan &&
   css`
-    background:${palette.cyan[5]};
+    background:${palette.kkw[0]};
     &:hover {
-      background: ${palette.cyan[4]};
+      background: ${palette.kkw[1]};
     }}
   `}
 `;

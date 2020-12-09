@@ -3,11 +3,12 @@ import styled from 'styled-components';
 import Responsive from './Responsive';
 import Button from './Button';
 import { Link } from 'react-router-dom';
+import favicon from './simbol.png';
 
 const HeaderBlock = styled.div`
     position:fixed;
     width:100%;
-    background-color:#fff;
+    background:#fff;
     box-shadow:0px 2px 4px rgba(0,0,0,0.08);
 `;
 
@@ -19,11 +20,14 @@ const Wrapper = styled(Responsive)`
         .logo {
             font-size:1.125rem;
             font-weight:800;
-            letter-spacing:2px;
+            color:#fff;
         }
         .right {
             display:flex;
             align-items:center;
+        }
+        img {
+            width:25px;
         }
 `;
 const UserInfo = styled.div`
@@ -39,15 +43,15 @@ const Header = ({user,onLogout}) => {
         <>
             <HeaderBlock>
                 <Wrapper>
-                    <Link to="/" className="logo">KKWON BLOG</Link>
+                    <Link to="/" className="logo"><img src={favicon} alt="logo"/></Link>
                     {user ? (
                         <div className="right">
                             <UserInfo>{user.nickname}</UserInfo>
-                            <Button onClick={onLogout}>로그아웃</Button>
+                            <Button onClick={onLogout} cyan>로그아웃</Button>
                         </div>
                     ):(
                         <div className="right">
-                        <Button to="/login">로그인</Button>
+                        <Button to="/login" cyan>로그인</Button>
                     </div>
                     )}
                 </Wrapper>

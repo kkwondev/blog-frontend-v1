@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import palette from '../../lib/styles/palette';
 
 const SubInfoBlock = styled.div`
+  letter-spacing:-1px;
   ${props =>
     props.hasMarginTop &&
     css`
