@@ -34,7 +34,7 @@ export const writePost = createAction(WRITE_POST, ({ title, body, tags }) => ({
   body,
   tags,
 }));
-export const setOriginalPost = createAction(SET_ORIGINAL_POST, post => post);
+export const setOriginalPost = createAction(SET_ORIGINAL_POST, post => post.thisPost);
 export const updatePost = createAction(
   UPDATE_POST,
   ({id,title,body,tags}) => ({

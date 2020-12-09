@@ -45,7 +45,7 @@ const PostItem = ({ post }) => {
   return (
     <PostItemBlock>
       <h2>
-        <Link to={`/@${user.username}/${_id}`}>{title}</Link>
+        <Link to={`/@${user.nickname}/${_id}`}>{title}</Link>
       </h2>
       <SubInfo
         username={!user.nickname ? '닉네임 없음' : user.nickname }

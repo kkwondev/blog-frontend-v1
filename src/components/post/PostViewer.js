@@ -35,19 +35,19 @@ const PostViewer = ({post,error,loading,actionButtons}) => {
     if (loading || !post) {
         return null;
     }
-    const {title,body,user,publishedDate,tags} = post;
+    const {thisPost} = post;
     return(
         <PostViewerBlock>
             <PostHead>
-               <h1>{title}</h1>  
+               <h1>{thisPost.title}</h1>  
             <SubInfo
-            username={!user.nickname ? '닉네임 없음' : user.nickname}
-            publishedDate={publishedDate}
+            username={!thisPost.user.nickname ? '닉네임 없음' : thisPost.user.nickname}
+            publishedDate={thisPost.publishedDate}
             hasMarginTop/>
-            <Tags tags={tags}/>
+            <Tags tags={thisPost.tags}/>
             </PostHead>
         {actionButtons}
-        <PostContent dangerouslySetInnerHTML={{__html:body}}/>
+        <PostContent dangerouslySetInnerHTML={{__html:thisPost.body}}/>
         </PostViewerBlock>
     );
 }
