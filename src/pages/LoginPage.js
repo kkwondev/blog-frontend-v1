@@ -1,7 +1,5 @@
 import React from 'react';
-
 import AuthTemplate from '../components/auth/AuthTemplate';
-import Footer from '../components/common/Footer';
 import LoginForm from '../containers/auth/LoginForm';
 
 const LoginPage = () => {
