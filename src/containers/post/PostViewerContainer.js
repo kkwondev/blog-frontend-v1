@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { withRouter } from 'react-router-dom';
+import Profile from '../../components/common/Profile';
 import PostActionButtons from '../../components/post/PostActionButtons';
 import PostNavigator from '../../components/post/PostNavigator';
 import PostViewer from '../../components/post/PostViewer';
@@ -48,6 +49,7 @@ const PostViewerContainer =({match,history}) => {
         actionButtons={ownPost && <PostActionButtons onEdit={onEdit} onRemove={onRemove}/>}
     />
     <PostNavigator post={post}/>
+    <Profile post={post} postViwer/>
     </>
     );
 }

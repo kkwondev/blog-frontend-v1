@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { useSelector } from 'react-redux';
+import Footer from '../components/common/Footer';
 import Responsive from '../components/common/Responsive';
 import EditorContainer from '../containers/write/EditorContainer';
 import TagBoxContainer from '../containers/write/TagBoxContainer';
@@ -19,6 +20,7 @@ const WritePage = ({history}) => {
             <EditorContainer/>
             <TagBoxContainer/>
             <WriteActionButtonsContainer/>
+            <Footer/>
         </Responsive>
     );
 }

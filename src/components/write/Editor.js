@@ -10,7 +10,7 @@ import ImageUploader from "quill-image-uploader";
 Quill.register("modules/imageUploader", ImageUploader);
 
 const EditorBlock = styled(Responsive)`
-  padding: 5rem 0;
+  padding-top:5rem;
 `;
 const TitleInput = styled.input`
   font-size: 3rem;

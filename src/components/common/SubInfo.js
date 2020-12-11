@@ -5,6 +5,9 @@ import palette from '../../lib/styles/palette';
 
 const SubInfoBlock = styled.div`
   letter-spacing:-1px;
+  text-align:right;
+  font-style: italic;
+  font-size:14px;
   ${props =>
     props.hasMarginTop &&
     css`

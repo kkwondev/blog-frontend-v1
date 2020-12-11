@@ -20,6 +20,12 @@ const WritePostButtonWrapper = styled.div`
 const PostItemBlock = styled.div`
   padding-top: 2rem;
   padding-bottom: 2rem;
+  opacity:1;
+  transition:text-shadow 0.3s, opacity 0.5s;
+  &:hover {
+      opacity:0.5;
+      text-shadow:1px 1px 1px ${palette.gray[6]}
+    }
   /* 맨 위 포스트는 padding-top 없음 */
   &:first-child {
     padding-top: 0;
@@ -29,31 +35,38 @@ const PostItemBlock = styled.div`
   }
   h2 {
     font-size: 1.5rem;
-    letter-spacing:-2px;
+    letter-spacing: -2px;
     margin-bottom: 0;
     margin-top: 0;
-    &:hover {
-      color: ${palette.gray[6]};
-    }
   }
   p {
     margin-top: 1rem;
   }
+`;
+const WriteButton = styled(Button) `
+  position:fixed;
+  width:42.75px;
+  height:42.75px;
+  line-height:39px;
+  font-size:1.5rem;
+  text-align:center;
+  padding:0;
+  bottom:30px;
+  right:30px;
+  border-radius:50%;
 `;
 
 const PostItem = ({ post }) => {
   const { publishedDate, user, tags, title, body, _id } = post;
   return (
     <PostItemBlock>
-      <h2>
-        <Link to={`/@${user.nickname}/${_id}`}>{title}</Link>
-      </h2>
-      <SubInfo
-        username={!user.nickname ? '닉네임 없음' : user.nickname }
-        publishedDate={new Date(publishedDate)}
-      />
-      <Tags tags={tags} />
-      <p>{body}</p>
+       <Link to={`/@${user.nickname}/${_id}`}><h2>{title}</h2></Link>
+        <SubInfo
+          username={!user.nickname ? '닉네임 없음' : user.nickname}
+          publishedDate={new Date(publishedDate)}
+        />
+        <Tags tags={tags} />
+        <p>{body}</p>
     </PostItemBlock>
   );
 };
@@ -63,18 +76,18 @@ const PostList = ({ posts, loading, error, showWriteButton }) => {
     <PostListBlock>
       <WritePostButtonWrapper>
         {showWriteButton && (
-          <Button cyan to="/write">
-            새 글 작성하기
-          </Button>
+          <WriteButton cyan to="/write">
+            +
+          </WriteButton>
         )}
       </WritePostButtonWrapper>
-        {!loading && posts && (
-                  <div>
-                      {posts.map(post => (
-                          <PostItem post={post} key={post._id}/>
-                      ))}
-                  </div>
-        )}
+      {!loading && posts && (
+        <div>
+          {posts.map((post) => (
+            <PostItem post={post} key={post._id} />
+          ))}
+        </div>
+      )}
     </PostListBlock>
   );
 };

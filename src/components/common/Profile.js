@@ -1,21 +1,22 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import styled from 'styled-components';
+import styled,{css} from 'styled-components';
 import palette from '../../lib/styles/palette';
 import Responsive from './Responsive';
 import me from './me.jpg';
 
 const Wrapper = styled(Responsive)`
-  padding-top: 4rem;
+
 `;
 const ProfileWrapper = styled.div`
     border-bottom:1px solid ${palette.gray[3]};
     padding:30px 0;
+    box-sizing:border-box;
 `;
 const ProfileHead = styled.div`
   font-size: 2.5rem;
   font-weight: 900;
-  height:60px;
+  line-height:1.05;
   padding-left: 20px;
   letter-spacing: -2px;
   color: #333;
@@ -27,7 +28,8 @@ const ProfileHead = styled.div`
   border-image-slice: 1;
   border-image-width: 0 0 0 8px;
   font-family: 'Catamaran', sans-serif;
-  margin-bottom:10px;
+  margin-bottom:20px;
+  font-kerning: normal;
 `;
 const Author = styled.div`
   width: 100%;
@@ -92,11 +94,15 @@ const Author = styled.div`
   }
 `;
 
-const Profile = () => {
+const marginTop = {
+  marginTop : '5rem'
+}
+
+const Profile = ({post}) => {
   return (
-    <Wrapper>
+    <Wrapper style={!post ? marginTop : null}>
       <ProfileWrapper>
-        <ProfileHead>Kkwon's blog</ProfileHead>
+        {!post ? <ProfileHead>Kkwon's blog</ProfileHead> : null}
         <Author>
           <div className="AuthorImg"></div>
           <div className="AuthorIntro">
@@ -105,7 +111,7 @@ const Profile = () => {
               <span className="about">@Kkwon</span>
             </Link>
             <p>끈기있는, 노력하는</p>
-            <a href="http://www.github.com/kkwoncokr" target="_blank">
+            <a href="http://www.github.com/kkwoncokr" target="_blank" rel="noreferrer">
               Github
             </a>
           </div>

@@ -10,6 +10,7 @@ const HeaderBlock = styled.div`
     width:100%;
     background:#fff;
     box-shadow:0px 2px 4px rgba(0,0,0,0.08);
+    z-index:999;
 `;
 
 const Wrapper = styled(Responsive)`
