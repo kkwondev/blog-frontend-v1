@@ -11,8 +11,10 @@ import rootReducer,{rootSaga} from './modules';
 import { tempSetUser,check } from './modules/user';
 
 const sagaMiddleWare = createSagaMiddleware();
-const store = createStore(rootReducer,
-  applyMiddleware(sagaMiddleWare))
+const store = createStore(
+  rootReducer,
+ applyMiddleware(sagaMiddleWare),
+);
 function loadUser() {
   try{
     const user =localStorage.getItem('user');

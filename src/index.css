@@ -36,8 +36,9 @@ a {
 
 
 img {
-  width:100%;
+  width:50%;
   display: block;
+  margin:0 auto;
 }
 
 pre {
@@ -46,6 +47,12 @@ pre {
   padding:10px 10px;
   border-radius: 5px;
   margin:5px 0;
+}
+blockquote {
+  border-left:4px solid #ccc;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  padding-left: 16px;
 }
 
 code {
