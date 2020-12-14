@@ -49,6 +49,7 @@ const Editor = ({ title, body, onChangeField }) => {
           ['bold', 'italic', 'underline', 'strike'],
           [{ list: 'ordered' }, { list: 'bullet' }],
           ['blockquote', 'code-block', 'link', 'image'],
+          [{ 'color': [] }, { 'background': [] }]
         ],
         imageUploader: {
             upload: file => {
