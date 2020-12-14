@@ -11,11 +11,11 @@ git clone https://github.com/kkwoncokr/blog.kkwon.me_frontend
 #### Config
 ```
 cd ${project Root}
-npm install
 ```
 
 #### Node Module Install.
 ```
+npm i yarn
 yarn install
 ```
 
