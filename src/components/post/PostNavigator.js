@@ -25,6 +25,9 @@ const PostNavigatorBlock = styled(Responsive)`
     border-radius: 6px;
     font-size: 12px;
     opacity: .8;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
   }
   li + li > a {
     border-left: 0.5px solid ${palette.gray[2]};

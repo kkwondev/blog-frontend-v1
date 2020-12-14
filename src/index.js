@@ -6,15 +6,13 @@ import reportWebVitals from './reportWebVitals';
 import {BrowserRouter} from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { createStore,applyMiddleware } from 'redux';
-import { composeWithDevTools } from 'redux-devtools-extension';
 import createSagaMiddleware from 'redux-saga';
 import rootReducer,{rootSaga} from './modules';
 import { tempSetUser,check } from './modules/user';
 
 const sagaMiddleWare = createSagaMiddleware();
-const store = createStore(rootReducer, composeWithDevTools(
-  applyMiddleware(sagaMiddleWare)
-))
+const store = createStore(rootReducer,
+  applyMiddleware(sagaMiddleWare))
 function loadUser() {
   try{
     const user =localStorage.getItem('user');

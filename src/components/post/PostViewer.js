@@ -30,12 +30,18 @@ const PostHead = styled.div`
     font-family: 'Catamaran', sans-serif;
     margin-bottom: 10px;
     font-kerning:normal;
+    @media (max-width: 780px) {
+    font-size: 1.2rem;
+  }
   }
 `;
 
 const PostContent = styled.div`
   font-size: 1.3125rem;
   color: ${palette.gray[8]};
+  @media (max-width: 780px) {
+    font-size: 0.9rem;
+  }
 `;
 
 const PostViewer = ({ post, error, loading, actionButtons }) => {

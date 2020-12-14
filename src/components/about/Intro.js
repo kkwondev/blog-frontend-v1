@@ -228,7 +228,7 @@ const Intro = () => {
       </table>
       <h2>Publish</h2>
       <ul>
-        <li>한성백제박물관 <br/><a href="hhttp://kkwon.co.kr/project/han/index.html">(http://kkwon.co.kr/project/han/index.html)</a></li>
+        <li>한성백제박물관 <br/><a href="http://kkwon.co.kr/project/han/index.html">(http://kkwon.co.kr/project/han/index.html)</a></li>
         <li>화평동 왕냉면 <br/><a href="http://kkwon.co.kr/project/hwa/index.html">(http://kkwon.co.kr/project/hwa/index.html)</a></li>
         <li>스터디 코드 <br/><a href="http://kkwon.co.kr/project/study/index.html">(http://kkwon.co.kr/project/study/index.html)</a></li>
       </ul>
