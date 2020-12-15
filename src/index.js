@@ -7,14 +7,13 @@ import {BrowserRouter} from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { createStore,applyMiddleware } from 'redux';
 import createSagaMiddleware from 'redux-saga';
-import { composeWithDevTools } from 'redux-devtools-extension';
 import rootReducer,{rootSaga} from './modules';
 import { tempSetUser,check } from './modules/user';
 
 const sagaMiddleWare = createSagaMiddleware();
 const store = createStore(
   rootReducer,
-  composeWithDevTools(applyMiddleware(sagaMiddleWare))
+  applyMiddleware(sagaMiddleWare)
 
 );
 function loadUser() {
