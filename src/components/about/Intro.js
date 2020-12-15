@@ -150,7 +150,7 @@ const Intro = () => {
               <strong>Blog</strong>
             </td>
             <td align="center">
-              <a href="http://blog.kkwon.me">http://blog.kkwon.me</a>
+              <a href="https://kkwon.me">https://kkwon.me</a>
             </td>
           </tr>
           <tr>
