@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const client = axios.create({
-    baseURL: 'http://api.kkwon.me',
+    baseURL: 'https://api.kkwon.me',
     withCredentials:true,
 });
 
