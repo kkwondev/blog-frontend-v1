@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const client = axios.create({
-    baseURL: 'http://blog-api.kkwon.me',
+    baseURL: 'http://api.kkwon.me',
     withCredentials:true,
 });
 
