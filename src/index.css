@@ -36,7 +36,7 @@ a {
 
 
 img {
-  width:50%;
+  width:70%;
   display: block;
   margin:0 auto;
 }
@@ -47,6 +47,7 @@ pre {
   padding:10px 10px;
   border-radius: 5px;
   margin:5px 0;
+  overflow-x:auto;
 }
 blockquote {
   border-left:4px solid #ccc;
@@ -58,4 +59,10 @@ blockquote {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+@media all and (max-width:700px) {
+  img {
+    width:100%;
+  }
 }
