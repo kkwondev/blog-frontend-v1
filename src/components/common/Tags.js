@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 
 const TagsBlock = styled.div`
     margin-top:0.5rem;
+    margin-bottom:0.5rem;
     .tag {
         display:inline-block;
         color: ${palette.cyan[7]};
