@@ -37,7 +37,7 @@ const PostHead = styled.div`
 `;
 
 const PostContent = styled.div`
-  font-size: 1.3125rem;
+  font-size: 1.1rem;
   color: ${palette.gray[8]};
   @media (max-width: 780px) {
     font-size: 0.9rem;
