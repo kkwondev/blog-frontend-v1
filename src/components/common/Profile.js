@@ -52,6 +52,7 @@ const Author = styled.div`
     font-size: 0.8rem;
     color: ${palette.gray[6]};
     letter-spacing: -1px;
+    margin:15px 0 5px 0;
   }
   .AuthorIntro a {
     font-size: 0.8rem;
