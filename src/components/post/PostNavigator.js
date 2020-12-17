@@ -26,8 +26,11 @@ const PostNavigatorBlock = styled(Responsive)`
     flex: 1 1 0%;
     width:50%;
     height:50px;
+    line-height:50px;
+    padding:0 10px;
     background-color:${palette.kkw[1]};
     border-radius: 6px;
+    overflow:hidden;
     @media all and(max-width:780px) {
       width:100%;
       flex: initial;
@@ -46,9 +49,6 @@ const PostNavigatorBlock = styled(Responsive)`
   }
   li + li {
     margin-left:3rem;
-  }
-  li + li > a {
-    border-left: 0.5px solid ${palette.gray[2]};
     background-color:${palette.kkw[0]};
   }
 `;
