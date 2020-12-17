@@ -7,6 +7,7 @@ import Responsive from '../common/Responsive';
 const PostNavigatorBlock = styled(Responsive)`
   margin-top: 5rem;
   .navigator {
+    width:100%;
     border-top: 1px solid ${palette.gray[2]};
     display: flex;
     justify-content: space-between;
@@ -15,10 +16,14 @@ const PostNavigatorBlock = styled(Responsive)`
     /* padding:30px 100px; */
     padding-top:30px;
     padding-left:0;
+    @media all and(max-width:780px) {
+      flex-direction: column-reverse;
+    }
   }
   li > a {
     background-color:${palette.kkw[1]};
     color:#fff;
+    flex: 1 1 0%;
     font-weight:600;
     padding: 7px 16px 8px;
     box-sizing:border-box;
@@ -29,6 +34,10 @@ const PostNavigatorBlock = styled(Responsive)`
     text-overflow:ellipsis;
     white-space:nowrap;
   }
+  @media all and(max-width:780px) {
+      width:100%;
+      flex: initial;
+    }
   li + li > a {
     border-left: 0.5px solid ${palette.gray[2]};
     background-color:${palette.kkw[0]};
