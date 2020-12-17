@@ -48,6 +48,9 @@ const PostNavigatorBlock = styled(Responsive)`
     flex: 1 1 0%;
     font-weight:600;
     font-size: 16px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
   li + li {
     margin-left:3rem;
