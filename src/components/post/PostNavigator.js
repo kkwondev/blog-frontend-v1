@@ -61,8 +61,8 @@ const PostNavigator = ({ post }) => {
   return (
     <PostNavigatorBlock>
       <ul className="navigator">
-        <li>{post.prevPost.length === 1 && <Link to={`/@${prevPost[0].user.nickname}/${prevPost[0]._id}`}>←{prevPost[0].title}</Link>}</li>
-        <li>{post.nextPost.length === 1 && <Link to={`/@${nextPost[0].user.nickname}/${nextPost[0]._id}`}>{nextPost[0].title}→</Link>}</li>
+      {post.prevPost.length === 1 && <li> <Link to={`/@${prevPost[0].user.nickname}/${prevPost[0]._id}`}>←{prevPost[0].title}</Link></li>}
+      {post.nextPost.length === 1 &&<li> <Link to={`/@${nextPost[0].user.nickname}/${nextPost[0]._id}`}>{nextPost[0].title}→</Link></li>}
       </ul>
     </PostNavigatorBlock>
   );
