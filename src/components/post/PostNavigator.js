@@ -9,7 +9,6 @@ const PostNavigatorBlock = styled(Responsive)`
   .navigator {
     width:100%;
     border-top: 1px solid ${palette.gray[2]};
-    display: flex;
     justify-content: space-between;
     margin:40px 0 0 0;
     list-style:none;
@@ -20,7 +19,18 @@ const PostNavigatorBlock = styled(Responsive)`
       flex-direction: column-reverse;
     }
   }
+  ul {
+    display:flex;
+  }
+  li {
+    flex: 1 1 0%;
+    @media all and(max-width:780px) {
+      width:100%;
+      flex: initial;
+    }
+  }
   li > a {
+    width:100%;
     background-color:${palette.kkw[1]};
     color:#fff;
     flex: 1 1 0%;
@@ -34,10 +44,9 @@ const PostNavigatorBlock = styled(Responsive)`
     text-overflow:ellipsis;
     white-space:nowrap;
   }
-  @media all and(max-width:780px) {
-      width:100%;
-      flex: initial;
-    }
+  li + li {
+    margin-left:3rem;
+  }
   li + li > a {
     border-left: 0.5px solid ${palette.gray[2]};
     background-color:${palette.kkw[0]};
