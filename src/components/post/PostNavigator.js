@@ -53,6 +53,9 @@ const PostNavigatorBlock = styled(Responsive)`
       width:100%;
       flex: initial;
       margin-left:0;
+      margin-top:1rem;
+      padding:0 1rem;
+      box-sizing:border-box;
     }
   }
 `;
