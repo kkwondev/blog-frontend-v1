@@ -45,7 +45,6 @@ const PostNavigatorBlock = styled(Responsive)`
     height:100%;
     display:block;
     color:#fff;
-    flex: 1 1 0%;
     font-weight:600;
     font-size: 16px;
     overflow: hidden;
