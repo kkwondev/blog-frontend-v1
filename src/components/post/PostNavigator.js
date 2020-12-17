@@ -36,6 +36,8 @@ const PostNavigatorBlock = styled(Responsive)`
     @media (max-width:780px) {
       width:100%;
       flex: initial;
+      padding:0 1rem;
+      box-sizing:border-box;
     }
   }
   li > a {
@@ -54,8 +56,6 @@ const PostNavigatorBlock = styled(Responsive)`
       flex: initial;
       margin-left:0;
       margin-top:1rem;
-      padding:0 1rem;
-      box-sizing:border-box;
     }
   }
 `;
