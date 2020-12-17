@@ -9,21 +9,22 @@ const PostNavigatorBlock = styled(Responsive)`
   .navigator {
     width:100%;
     border-top: 1px solid ${palette.gray[2]};
-    justify-content: space-between;
     margin:40px 0 0 0;
     list-style:none;
     /* padding:30px 100px; */
     padding-top:30px;
     padding-left:0;
+  }
+  ul {
+    display:flex;
+    justify-content: space-between;
     @media all and(max-width:780px) {
       flex-direction: column-reverse;
     }
   }
-  ul {
-    display:flex;
-  }
   li {
     flex: 1 1 0%;
+    width:50%;
     @media all and(max-width:780px) {
       width:100%;
       flex: initial;
