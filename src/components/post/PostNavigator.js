@@ -25,9 +25,9 @@ const PostNavigatorBlock = styled(Responsive)`
   li {
     flex: 1 1 0%;
     width:50%;
-    height:50px;
-    line-height:50px;
-    padding:0 10px;
+    height:64px;
+    line-height:64px;
+    text-align:center;
     background-color:${palette.kkw[1]};
     border-radius: 6px;
     overflow:hidden;
@@ -42,10 +42,12 @@ const PostNavigatorBlock = styled(Responsive)`
   }
   li > a {
     width:100%;
+    height:100%;
+    display:block;
     color:#fff;
     flex: 1 1 0%;
     font-weight:600;
-    font-size: 12px;
+    font-size: 14px;
     opacity: .8;
   }
   li + li {
@@ -55,7 +57,7 @@ const PostNavigatorBlock = styled(Responsive)`
       width:100%;
       flex: initial;
       margin-left:0;
-      margin-top:1rem;
+      margin-bottom:1rem;
     }
   }
 `;
