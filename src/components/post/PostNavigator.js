@@ -31,6 +31,8 @@ const PostNavigatorBlock = styled(Responsive)`
     background-color:${palette.kkw[1]};
     border-radius: 6px;
     overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
     @media all and(max-width:780px) {
       width:100%;
       flex: initial;
@@ -43,9 +45,6 @@ const PostNavigatorBlock = styled(Responsive)`
     font-weight:600;
     font-size: 12px;
     opacity: .8;
-    overflow:hidden;
-    text-overflow:ellipsis;
-    white-space:nowrap;
   }
   li + li {
     margin-left:3rem;
