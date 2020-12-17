@@ -25,6 +25,9 @@ const PostNavigatorBlock = styled(Responsive)`
   li {
     flex: 1 1 0%;
     width:50%;
+    height:50px;
+    background-color:${palette.kkw[1]};
+    border-radius: 6px;
     @media all and(max-width:780px) {
       width:100%;
       flex: initial;
@@ -32,13 +35,9 @@ const PostNavigatorBlock = styled(Responsive)`
   }
   li > a {
     width:100%;
-    background-color:${palette.kkw[1]};
     color:#fff;
     flex: 1 1 0%;
     font-weight:600;
-    padding: 7px 16px 8px;
-    box-sizing:border-box;
-    border-radius: 6px;
     font-size: 12px;
     opacity: .8;
     overflow:hidden;
