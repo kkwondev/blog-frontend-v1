@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { useSelector } from 'react-redux';
 import Footer from '../components/common/Footer';
 import Responsive from '../components/common/Responsive';
@@ -17,6 +18,11 @@ const WritePage = ({history}) => {
     })
     return(
         <Responsive>
+            <Helmet>
+                <title>
+                    글 작성 - KKWON
+                </title>
+            </Helmet>
             <EditorContainer/>
             <TagBoxContainer/>
             <WriteActionButtonsContainer/>
