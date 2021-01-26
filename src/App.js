@@ -6,6 +6,7 @@ import LoginPage from './pages/LoginPage';
 import WritePage from './pages/WritePage';
 import PostPage from './pages/PostPage';
 import AboutPage from './pages/AboutPage';
+import { Helmet } from 'react-helmet-async';
 
 function App() {
   useEffect(() => {
@@ -23,6 +24,9 @@ function App() {
   }, []);
   return (
     <>
+      <Helmet>
+        <title>KKWON - 강경원 블로그</title>
+      </Helmet>
       <Route component={PostListPage} path={['/@:nickname', '/']} exact />
       <Route component={LoginPage} path="/login" />
       {/* <Route component={RegisterPage} path="/register" /> */}

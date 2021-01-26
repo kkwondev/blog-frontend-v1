@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import styled from 'styled-components';
 import palette from '../../lib/styles/palette';
 import Responsive from '../common/Responsive';
@@ -57,6 +58,11 @@ const PostViewer = ({ post, error, loading, actionButtons }) => {
   const { thisPost } = post;
   return (
     <PostViewerBlock>
+      <Helmet>
+        <title>
+          {thisPost.title} - KKWON
+        </title>
+      </Helmet>
       <PostHead>
         <h1>{thisPost.title}</h1>
         <SubInfo
