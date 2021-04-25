@@ -6,6 +6,7 @@ import palette from '../../lib/styles/palette';
 import SubInfo from '../common/SubInfo';
 import Tags from '../common/Tags';
 import { Link } from 'react-router-dom';
+import Preparing from './Preparing';
 
 const PostListBlock = styled(Responsive)`
   /* margin-top: 3rem; */
@@ -73,22 +74,25 @@ const PostItem = ({ post }) => {
 
 const PostList = ({ posts, loading, error, showWriteButton }) => {
   return (
-    <PostListBlock>
-      <WritePostButtonWrapper>
-        {showWriteButton && (
-          <WriteButton cyan to="/write">
-            +
-          </WriteButton>
+    <>
+      <PostListBlock>
+        <Preparing />
+        <WritePostButtonWrapper>
+          {showWriteButton && (
+            <WriteButton cyan to="/write">
+              +
+            </WriteButton>
+          )}
+        </WritePostButtonWrapper>
+        {!loading && posts && (
+          <div>
+            {posts.map((post) => (
+              <PostItem post={post} key={post._id} />
+            ))}
+          </div>
         )}
-      </WritePostButtonWrapper>
-      {!loading && posts && (
-        <div>
-          {posts.map((post) => (
-            <PostItem post={post} key={post._id} />
-          ))}
-        </div>
-      )}
-    </PostListBlock>
+      </PostListBlock>
+    </>
   );
 };
 

@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Route } from 'react-router-dom';
+import { Redirect, Route } from 'react-router-dom';
 import PostListPage from './pages/PostListPage';
 import LoginPage from './pages/LoginPage';
 // import RegisterPage from './pages/RegisterPage';
@@ -28,11 +28,12 @@ function App() {
         <title>KKWON - 강경원 블로그</title>
       </Helmet>
       <Route component={PostListPage} path={['/@:nickname', '/']} exact />
-      <Route component={LoginPage} path="/login" />
+      {/* <Route component={LoginPage} path="/login" /> */}
       {/* <Route component={RegisterPage} path="/register" /> */}
-      <Route component={WritePage} path="/write" />
-      <Route component={PostPage} path="/@:nickname/:postId" />
-      <Route component={AboutPage} path="/about" />
+      {/* <Route component={WritePage} path="/write" /> */}
+      {/* <Route component={PostPage} path="/@:nickname/:postId" /> */}
+      {/* <Route component={AboutPage} path="/about" /> */}
+      <Redirect path="*" to="/" />
     </>
   );
 }
